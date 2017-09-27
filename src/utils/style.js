@@ -12,7 +12,7 @@ export const PublicStylesString = {
 }
 
 export const ThemeStyle = {
-    themeColor : '#9c6e4e',                 //主题土
+    themeColor : '#9FADC7',                 //主题土
     themeColor1 : '#f76260',                 //主题红
     themeColor2 : '#faa202',             //主题黄
     themeColor3 : '#2ad2c9',                        //主题蓝绿色

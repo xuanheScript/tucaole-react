@@ -1,6 +1,7 @@
 .div1{
+    margin-right: 27px;
+    justify-content: center;
     height: 52px;
-    font-size: 2rem;
 }
 .div2{
     position: fixed;
@@ -14,6 +15,7 @@
     background-clip: content-box;
     top: 0px;
     left: 0px;
+    height: 52px;
 }
 .div3{
     display: flex;
@@ -89,4 +91,22 @@
 .button1{
     margin-left:24px;
     color:#8590a6;
+}
+.view1{
+    justify-content: center;
+    align-items: center;
+}
+.view2{
+    flex:1;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+.button2{
+    margin-right: 40px;
+}
+.img2{
+    height: 30px;
+    width: 30px;
+    border-radius: 2px;
 }

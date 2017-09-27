@@ -214,7 +214,6 @@ module.exports = {
               loader: 'style-loader!css-loader?modules',
               include:[paths.appCssModules,path.resolve(__dirname, 'src/component'),/flexboxgrid/]
           },
-
           {
             test: /\.less$/,
             use: [

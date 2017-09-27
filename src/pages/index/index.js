@@ -5,7 +5,7 @@ import {
 } from "react-router-dom";
 import {View} from "react-web-dom";
 import { ThemeStyle, windowHeight, windowWidth } from "../../utils/style";
-import { Row, AutoComplete, Input, Button, Icon, Dropdown, Menu, Card } from 'antd';
+import { Row, AutoComplete, Input, Button, Icon, Dropdown, Menu, Card, Col } from 'antd';
 import styles from '../../styles/index/index.css';
 
 
@@ -18,6 +18,21 @@ const menu = (
 );
 
 
+const menu2 = (
+  <Menu>
+    <Menu.Item>
+      <a target="_blank" rel="noopener noreferrer" href="http://www.alipay.com/">1st menu item</a>
+    </Menu.Item>
+    <Menu.Item>
+      <a target="_blank" rel="noopener noreferrer" href="http://www.taobao.com/">2nd menu item</a>
+    </Menu.Item>
+    <Menu.Item>
+      <a target="_blank" rel="noopener noreferrer" href="http://www.tmall.com/">3d menu item</a>
+    </Menu.Item>
+  </Menu>
+);
+
+
 class Index extends Component {
     render() {
         return (
@@ -25,7 +40,9 @@ class Index extends Component {
                 <div style={{height:52}}>
                     <View className={styles.div2} style={{alignItems:'center',width:windowWidth}}>
                         <View style={{width:1000,flexDirection:'row'}}>
-                            <div className={styles.div1}>吐槽了</div>
+                            <View className={styles.div1}>
+                                <img src={require('../../images/logo.png')} height={42}/>
+                            </View>
                             <View style={{flex:1,flexDirection:'row',alignItems:'center',justifyContent:'center'}} className={'global-search-wrapper'}>
                                 <AutoComplete
                                     size="large"
@@ -43,6 +60,10 @@ class Index extends Component {
                                         }
                                     />
                                 </AutoComplete>
+                            </View>
+                            <View className={styles.view2}>
+                                <Button type="primary" shape="circle" icon="bell" className={styles.button2}/>
+                                <img src={'https://pic1.zhimg.com/da8e974dc_im.jpg'} className={styles.img2}/>
                             </View>
                         </View>
                     </View>
@@ -63,7 +84,7 @@ class Index extends Component {
                                         <p className={styles.p3}>细思极恐,谣言生于黑心而非愚者，谣言止于良心而非智者！</p>
                                     </View>
                                     <p className={styles.p4}>
-                                        我来说几个吧！ 1、不记得哪年看新闻看到的，反正是02年以前了。一女子和丈夫闹矛盾，为了报复其丈夫，用剪刀剪她儿子的丁丁，号称要让那个没良心的断子…
+                                        依稀记得10年前，那时候父亲的工资每个月还只有3000多，一辆凯美瑞却需要20多万，可是到了现在，工资倍增不说，奥迪却卖到了不足20万，不得不说，咱们的生活品质…
                                     </p>
                                     <View className={styles.div8}>
                                         <Button
@@ -115,7 +136,20 @@ class Index extends Component {
                         <View style={{flex:1}}>
                             <Card style={{padding:0}}>
                                 <div>
-                                    
+                                    <Row>
+                                        {
+                                            [1,2,3,4,5,6].map((data,i)=>(
+                                                <Col lg={8} key={i} style={{marginBottom:i<3?25:0}}>
+                                                    <Dropdown overlay={menu2}>
+                                                        <View className={styles.view1}>
+                                                            <Icon type="hdd" style={{marginBottom:10,fontSize:20}}/>
+                                                            <span style={{color:ThemeStyle.themeColor}}>Live</span>
+                                                        </View>
+                                                    </Dropdown>
+                                                </Col>
+                                            ))
+                                        }
+                                    </Row>
                                 </div>
                             </Card>
                         </View>
