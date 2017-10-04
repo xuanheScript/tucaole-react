@@ -84,8 +84,7 @@ const developmentConfig =  {
 
     // api域名
     // domain : 'http://caoxiansheng.wenshuai.cn',
-    domain : 'http://www.jhyfxm.com',
-    // domain : 'http://192.168.1.252/xiaomi',
+    domain : 'http://118.89.228.231:8088/tucaole',
 
     // 是否开启输出日志
     log : true,

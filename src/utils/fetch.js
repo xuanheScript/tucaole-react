@@ -26,10 +26,10 @@ export default class Fetch {
                 store.dispatch(push('/user/loginRegister'))
             },
             headers : {
-                 "User-Id": headers.user_id,
-                 "Access-Token": headers.access_token,
-                 "Source" : headers.Source,
-                 "Wechat-Openid" : headers.wechat_openid,
+                //  "User-Id": headers.user_id,
+                //  "Access-Token": headers.access_token,
+                //  "Source" : headers.Source,
+                //  "Wechat-Openid" : headers.wechat_openid,
             },
             APP_ROOT_CONFIG : {
                 AppName,

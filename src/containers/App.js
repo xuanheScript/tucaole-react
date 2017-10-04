@@ -11,6 +11,7 @@ import { history } from '../store/ConfigureStore'
 import Container from "./Index";
 import '../utils/global.css'
 import Index from "../pages/index";
+import UserLogin from "../pages/user/login";
 
 
 const App = () => (
@@ -20,7 +21,8 @@ const App = () => (
         <Container>
             <Switch>
 
-                <Route path="/" component={Index}/>
+                <Route exact path="/" component={Index}/>
+                <Route path="/user/login" component={UserLogin}/>
 
                 {
                     // <Route path='/index/:tab' component={Index}/>

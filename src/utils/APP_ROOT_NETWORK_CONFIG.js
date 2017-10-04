@@ -6,7 +6,7 @@ import { env } from './APP_ROOT_CONFIG';
 
 const domain = env.domain
 
-const ROOT_URL = `${domain}/api/`;
+const ROOT_URL = `${domain}/`;
 const ROOT_URL2 = `${domain}/app/`;
 
 /*
@@ -2418,5 +2418,15 @@ export const API_URL = {
 		needLogin : true,
 		showLoading : true,
 	},
-
+	COMMONCAPTCHAGETCAPTCHA : {
+		domain : ROOT_URL,
+		apiUrl : 'common/captcha/getCaptcha',
+		author : '孙泉',
+		fetchUrl : ROOT_URL+'common/captcha/getCaptcha',
+		remark : '找回支付密码',
+		method : 'GET',
+		tableName : 'ez_store',
+		needLogin : false,
+		showLoading : false,
+	},
 }

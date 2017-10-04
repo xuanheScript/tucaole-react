@@ -63,7 +63,13 @@ class Index extends Component {
                             </View>
                             <View className={styles.view2}>
                                 <Button type="primary" shape="circle" icon="bell" className={styles.button2}/>
-                                <img src={'https://pic1.zhimg.com/da8e974dc_im.jpg'} className={styles.img2}/>
+                                <img
+                                    src={'https://pic1.zhimg.com/da8e974dc_im.jpg'}
+                                    className={styles.img2}
+                                    onClick = {()=>{
+                                        this.props.history.push('/user/login')
+                                    }}
+                                />
                             </View>
                         </View>
                     </View>
