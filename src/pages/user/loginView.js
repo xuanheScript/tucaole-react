@@ -26,6 +26,10 @@ class LoginView extends React.Component {
             if (!err) {
                 console.log("Received values of form: ", values);
             }
+            const {
+                showSendEmailModal
+            } = this.props
+            showSendEmailModal()
         });
     }
     checkPassword = (rule, value, callback) => {

@@ -1,7 +1,11 @@
+@value colors: "../ThemeStyle.css";
+@value themeColor from colors;
+
 .div1{
     margin-right: 27px;
     justify-content: center;
     height: 52px;
+    cursor: pointer;
 }
 .div2{
     position: fixed;
@@ -109,4 +113,15 @@
     height: 30px;
     width: 30px;
     border-radius: 2px;
+}
+.view3{
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    height: 30px;
+}
+.view3:hover{
+    background: #f4f8fb;
+
 }

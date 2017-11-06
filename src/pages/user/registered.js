@@ -26,6 +26,10 @@ class Registered extends React.Component {
             if (!err) {
                 console.log("Received values of form: ", values);
             }
+            const {
+                success
+            } = this.props
+            success()
         });
     }
     checkPassword = (rule, value, callback) => {
@@ -72,6 +76,9 @@ class Registered extends React.Component {
     render(){
         const { getFieldDecorator,getFieldValue } = this.props.form;
         const {geetestData} = this.state
+        const {
+            success
+        } = this.props
         return(
             <Form onSubmit={(e)=>{this.handleSubmit(e)}}>
                 <FormItem

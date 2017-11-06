@@ -1,61 +1,128 @@
 import React, { Component, PropTypes } from "react";
-import { Layout, Menu, Breadcrumb,Icon } from "antd";
-const { Header, Content, Footer,Sider } = Layout;
+import {
+    Layout,
+    Menu,
+    Breadcrumb,
+    Icon,
+    AutoComplete,
+    Button,
+    Input,
+    Popover,
+} from "antd";
+import { ThemeStyle, windowHeight, windowWidth } from "../../../utils/style";
+import styles from "../../../styles/index/index.css";
+import { View } from "react-web-dom";
+import { connect } from "react-redux";
+import { push , goBack } from 'react-router-redux'
+
+
+const { Header, Content, Footer, Sider } = Layout;
 const { SubMenu } = Menu;
-export default class IndexHeader extends Component {
+
+class IndexHeader extends Component {
     constructor(props) {
         super(props);
         this.state = {};
     }
     render() {
         return (
-            <Layout>
-    <Header className="header">
-      <div className="logo" />
-      <Menu
-        theme="dark"
-        mode="horizontal"
-        defaultSelectedKeys={['2']}
-        style={{ lineHeight: '64px' }}
-      >
-        <Menu.Item key="1">nav 1</Menu.Item>
-        <Menu.Item key="2">nav 2</Menu.Item>
-        <Menu.Item key="3">nav 3</Menu.Item>
-      </Menu>
-    </Header>
-    <Layout>
-      <Sider width={200} style={{ background: '#fff' }}>
-        <Menu
-          mode="inline"
-          defaultSelectedKeys={['1']}
-          defaultOpenKeys={['sub1']}
-          style={{ height: '100%', borderRight: 0 }}
-        >
-          <SubMenu key="sub1" title={<span><Icon type="user" />subnav 1</span>}>
-            <Menu.Item key="1">option1</Menu.Item>
-            <Menu.Item key="2">option2</Menu.Item>
-            <Menu.Item key="3">option3</Menu.Item>
-            <Menu.Item key="4">option4</Menu.Item>
-          </SubMenu>
-          <SubMenu key="sub2" title={<span><Icon type="laptop" />subnav 2</span>}>
-            <Menu.Item key="5">option5</Menu.Item>
-            <Menu.Item key="6">option6</Menu.Item>
-            <Menu.Item key="7">option7</Menu.Item>
-            <Menu.Item key="8">option8</Menu.Item>
-          </SubMenu>
-          <SubMenu key="sub3" title={<span><Icon type="notification" />subnav 3</span>}>
-            <Menu.Item key="9">option9</Menu.Item>
-            <Menu.Item key="10">option10</Menu.Item>
-            <Menu.Item key="11">option11</Menu.Item>
-            <Menu.Item key="12">option12</Menu.Item>
-          </SubMenu>
-        </Menu>
-      </Sider>
-      <Layout style={{ padding: '0 24px 24px' }}>
-        
-      </Layout>
-    </Layout>
-  </Layout>
+            <div style={{ height: 52 }}>
+                <View
+                    className={styles.div2}
+                    style={{ alignItems: "center", width: windowWidth }}
+                >
+                    <View style={{ width: 1000, flexDirection: "row" }}>
+                        <View
+                            className={styles.div1}
+                            onClick={() => {
+                                this.props.dispatch(push("/"))
+                            }}
+                        >
+                            <img
+                                src={require("../../../images/logo.png")}
+                                height={42}
+                            />
+                        </View>
+                        <View
+                            style={{
+                                flex: 1,
+                                flexDirection: "row",
+                                alignItems: "center",
+                                justifyContent: "center"
+                            }}
+                            className={"global-search-wrapper"}
+                        >
+                            <AutoComplete
+                                size="large"
+                                onSearch={e => {}}
+                                placeholder="搜索你感兴趣的内容…"
+                                optionLabelProp="text"
+                                style={{ width: 500 }}
+                                className="global-search"
+                            >
+                                <Input
+                                    suffix={
+                                        <Button
+                                            className="search-btn"
+                                            size="large"
+                                            type="primary"
+                                        >
+                                            <Icon type="search" />
+                                        </Button>
+                                    }
+                                />
+                            </AutoComplete>
+                        </View>
+                        <View className={styles.view2}>
+                            <Button
+                                type="primary"
+                                shape="circle"
+                                icon="bell"
+                                className={styles.button2}
+                            />
+                            <Popover
+                                content={
+                                    <View>
+                                        <View
+                                            className={styles.view3}
+                                            onClick={() => {
+                                                this.props.dispatch(push("/user/profileEdit"))
+                                            }}
+                                        >
+                                            <Icon type="user" style={{fontSize:14,marginRight:5}}/>
+                                            个人资料
+                                        </View>
+                                        <View
+                                            className={styles.view3}
+                                            onClick={() => {
+                                                this.props.dispatch(push("/user/login"))
+                                            }}
+                                        >
+                                            <Icon type="poweroff" style={{fontSize:14,marginRight:5}}/>
+                                            退出登录
+                                        </View>
+                                    </View>
+                                }
+                                placement = {'bottom'}
+                            >
+                                <img
+                                    src={require('../../../images/defaultAvatar.jpg')}
+                                    className={styles.img2}
+                                />
+                            </Popover>
+                        </View>
+                    </View>
+                </View>
+            </div>
         );
     }
 }
+
+
+const mapStateToProps = store => {
+    return {
+        router: store.router
+    };
+};
+
+export default connect(mapStateToProps)(IndexHeader)
