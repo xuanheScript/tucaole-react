@@ -39,3 +39,35 @@
     font-size: 18px;
     margin-top: 5px;
 }
+.view6{
+    flex:1;
+    margin-left: 30px;
+}
+.span2{
+    font-size: 26px;
+    font-weight: 600;
+}
+.view7{
+    padding: 30px 0;
+    border-bottom: 1px solid #ebeef5;
+    flex-direction: row;
+}
+.span3{
+    width: 140px;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 36px;
+    color: #333;
+}
+.view8{
+    flex:1;
+    flex-direction: row;
+    align-items: center;
+}
+.div1{
+    margin-top: 30px;
+}
+.span4{
+    font-size: 15px;
+    color: #262626;
+}
