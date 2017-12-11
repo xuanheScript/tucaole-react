@@ -8,6 +8,7 @@ import {
     Icon,
     Form,
     message,
+    Tag,
 } from "antd";
 
 import styles from '../../styles/user/login.css';
@@ -76,6 +77,9 @@ class LoginView extends React.Component {
     render(){
         const { getFieldDecorator,getFieldValue } = this.props.form;
         const {geetestData} = this.state
+        const {
+            showResetPassWordModal
+        } = this.props
         return(
             <Form onSubmit={(e)=>{this.handleSubmit(e)}}>
                 <FormItem
@@ -117,6 +121,9 @@ class LoginView extends React.Component {
                         登陆
                     </Button>
                 </FormItem>
+                <View style={{justifyContent:'flex-end',flexDirection:'row'}}>
+                    <Tag onClick={showResetPassWordModal}>忘记密码？</Tag>
+                </View>
             </Form>
         )
     }

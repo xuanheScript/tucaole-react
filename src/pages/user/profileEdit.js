@@ -23,29 +23,41 @@ import Page from "../../component/index/page";
 
 const RadioGroup = Radio.Group;
 
-const options = [{
-  value: 'zhejiang',
-  label: 'Zhejiang',
-  children: [{
-    value: 'hangzhou',
-    label: 'Hangzhou',
-    children: [{
-      value: 'xihu',
-      label: 'West Lake',
-    }],
-  }],
-}, {
-  value: 'jiangsu',
-  label: 'Jiangsu',
-  children: [{
-    value: 'nanjing',
-    label: 'Nanjing',
-    children: [{
-      value: 'zhonghuamen',
-      label: 'Zhong Hua Men',
-    }],
-  }],
-}];
+const options = [
+    {
+        value: "河北省",
+        label: "河北省",
+        children: [
+            {
+                value: "石家庄",
+                label: "石家庄",
+                children: [
+                    {
+                        value: "某某区",
+                        label: "某某区"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        value: "天津市",
+        label: "天津市",
+        children: [
+            {
+                value: "天津",
+                label: "天津",
+                children: [
+                    {
+                        value: "河西区",
+                        label: "河西区"
+                    }
+                ]
+            }
+        ]
+    }
+];
+
 
 class ProfileEdit extends Component {
 

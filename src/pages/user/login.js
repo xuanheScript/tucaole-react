@@ -28,6 +28,7 @@ import {Fetch} from '../../utils'
 import Registered from './registered'
 import LoginView from './loginView'
 import SendEmail from './sendEmail'
+import ResetPassWord from './resetPassWord'
 
 
 
@@ -39,12 +40,16 @@ const TabPane = Tabs.TabPane;
 
 class UserLogin extends Component {
     state = {
-        visible: false
+        visible: false,
+        resetVisible: false,
     };
     componentDidMount(){
         global.particlesJS(particlesJson);
     }
     render() {
+        const {
+            resetVisible
+        } = this.state
         return (
             <div>
                 <div id="particles-js" style={{backgroundColor:ThemeStyle.themeColor}}></div>
@@ -63,6 +68,7 @@ class UserLogin extends Component {
                         <TabPane tab="登陆" key="2">
                             <LoginView
                                 showSendEmailModal = {this.showSendEmailModal}
+                                showResetPassWordModal = {this.showResetPassWordModal}
                             />
                         </TabPane>
                     </Tabs>
@@ -75,6 +81,15 @@ class UserLogin extends Component {
                     footer = {null}
                 >
                     <SendEmail history={this.props.history}/>
+                </Modal>
+                <Modal
+                    title="重设密码"
+                    visible={resetVisible}
+                    onOk={this.resetHandleOk}
+                    onCancel={this.resetHandleCancel}
+                    footer = {null}
+                >
+                    <ResetPassWord history={this.props.history}/>
                 </Modal>
             </div>
         )
@@ -98,6 +113,21 @@ class UserLogin extends Component {
     showSendEmailModal = () => {
         this.setState({
           visible: true,
+        });
+    }
+    resetHandleOk = e => {
+        this.setState({
+            resetVisible: false
+        });
+    };
+    resetHandleCancel = e => {
+        this.setState({
+            resetVisible: false
+        });
+    };
+    showResetPassWordModal = () => {
+        this.setState({
+          resetVisible: true,
         });
     }
 }
