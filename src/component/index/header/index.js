@@ -95,6 +95,15 @@ class IndexHeader extends Component {
                                         <View
                                             className={styles.view3}
                                             onClick={() => {
+                                                this.props.dispatch(push("/user/setting"))
+                                            }}
+                                        >
+                                            <Icon type="setting" style={{fontSize:14,marginRight:5}}/>
+                                            设置
+                                        </View>
+                                        <View
+                                            className={styles.view3}
+                                            onClick={() => {
                                                 this.props.dispatch(push("/user/login"))
                                             }}
                                         >

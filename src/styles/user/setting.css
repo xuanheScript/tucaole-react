@@ -1,0 +1,12 @@
+.view1{
+    padding: 12px 0;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1px dotted #eee;
+    padding-left: 15px;
+}
+.span1{
+    width: 65px;
+    color: #222;
+    font-size: 13px;
+}

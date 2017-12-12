@@ -15,7 +15,6 @@ import {
     Col
 } from "antd";
 import styles from "../../styles/index/index.css";
-import Header from "../../component/index/header";
 import Page from "../../component/index/page";
 
 const menu = (
@@ -62,7 +61,6 @@ class Index extends Component {
     render() {
         return (
             <div>
-                <Header />
                 <Page
                     style={{ flexDirection: "row" }}
                 >

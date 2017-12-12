@@ -18,7 +18,6 @@ import {
     Cascader,
 } from "antd";
 import styles from "../../styles/user/profileEdit.css";
-import Header from "../../component/index/header";
 import Page from "../../component/index/page";
 
 const RadioGroup = Radio.Group;
@@ -65,7 +64,6 @@ class ProfileEdit extends Component {
 
         return (
             <div>
-                <Header />
                 <Page>
                     <Card bodyStyle={{padding:0}}>
                         <View className={styles.view1}>
