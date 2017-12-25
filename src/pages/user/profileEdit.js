@@ -18,7 +18,7 @@ import {
     Cascader,
 } from "antd";
 import styles from "../../styles/user/profileEdit.css";
-import Page from "../../component/index/page";
+import Page from "../../components/index/page";
 
 const RadioGroup = Radio.Group;
 

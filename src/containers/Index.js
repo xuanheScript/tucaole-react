@@ -11,7 +11,6 @@ import { ThemeStyle } from "../utils/style"
 // import 'autotrack';
 // import fundebug from "fundebug-javascript";
 
-import IndexHeader from "../component/index/header"
 
 
 class Container extends Component {

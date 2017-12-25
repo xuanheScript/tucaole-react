@@ -55,6 +55,10 @@
     font-weight: 700;
     line-height: 1.6;
     color: #1e1e1e;
+    cursor:pointer;
+}
+.p2:hover{
+    color: themeColor;
 }
 .div7{
     margin-top: 14px;

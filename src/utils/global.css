@@ -786,3 +786,6 @@ body .am-list-item.am-input-item:after {
   position: absolute;
   right: 16px;
 }
+p{
+    margin: 0;
+}

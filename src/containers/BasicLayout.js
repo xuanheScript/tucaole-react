@@ -9,11 +9,14 @@ import {
 import { withRouter } from 'react-router-dom'
 import Container from "./Index";
 import { connect } from "react-redux";
-import Header from "../component/index/header";
+import Header from "../components/index/header";
 
 import Index from "../pages/index";
 import UserProfileEdit from "../pages/user/profileEdit";
 import UserSetting from "../pages/user/setting";
+import StoryDetail from "../pages/story/detail";
+
+
 
 
 class BasicLayout extends Component {
@@ -25,6 +28,7 @@ class BasicLayout extends Component {
                     <Route exact path="/" component={Index} />
                     <Route path="/user/profileEdit" component={UserProfileEdit}/>
                     <Route path="/user/setting" component={UserSetting}/>
+                    <Route path="/story/detail" component={StoryDetail}/>
                 </Switch>
             </div>
         )

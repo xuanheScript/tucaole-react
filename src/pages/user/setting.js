@@ -15,9 +15,9 @@ import {
 
 import styles from '../../styles/user/setting.css';
 import {Fetch} from '../../utils'
-import Page from "../../component/index/page";
-import UserSettingModifyEmail from "../../component/user/UserSettingModifyEmail";
-import UserSettingModifyPassWord from "../../component/user/UserSettingModifyPassWord";
+import Page from "../../components/index/page";
+import UserSettingModifyEmail from "../../components/user/UserSettingModifyEmail";
+import UserSettingModifyPassWord from "../../components/user/UserSettingModifyPassWord";
 
 
 

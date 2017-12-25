@@ -15,7 +15,7 @@ import {
     Col
 } from "antd";
 import styles from "../../styles/index/index.css";
-import Page from "../../component/index/page";
+import Page from "../../components/index/page";
 
 const menu = (
     <Menu>
@@ -59,115 +59,121 @@ const menu2 = (
 
 class Index extends Component {
     render() {
+        const {
+            history
+        } = this.props
         return (
-            <div>
-                <Page
-                    style={{ flexDirection: "row" }}
-                >
-                    <div className={styles.div4}>
-                        <div className={styles.div5}>
-                            <View className={styles.div6}>
-                                <p className={styles.p1}>热门内容, 来自: 法律</p>
-                                <p className={styles.p2}>有哪些令人毛骨悚然的案件？</p>
-                                <View className={styles.div7}>
-                                    <img
-                                        className={styles.img1}
-                                        src={
-                                            "https://pic2.zhimg.com/50/v2-2ba2ff350439f573274e59e1bc7b7119_s.jpg"
-                                        }
-                                        alt={"细思极恐"}
-                                    />
-                                    <p className={styles.p3}>
-                                        细思极恐,谣言生于黑心而非愚者，谣言止于良心而非智者！
-                                    </p>
-                                </View>
-                                <p className={styles.p4}>
-                                    依稀记得10年前，那时候父亲的工资每个月还只有3000多，一辆凯美瑞却需要20多万，可是到了现在，工资倍增不说，奥迪却卖到了不足20万，不得不说，咱们的生活品质…
+            <Page
+                style={{ flexDirection: "row" }}
+            >
+                <div className={styles.div4}>
+                    <div className={styles.div5}>
+                        <View className={styles.div6}>
+                            <p className={styles.p1}>热门内容, 来自: 法律</p>
+                            <p
+                                className={styles.p2}
+                                onClick={()=>{
+                                    history.push('/story/detail')
+                                }}
+                            >
+                                有哪些令人毛骨悚然的案件？
+                            </p>
+                            <View className={styles.div7}>
+                                <img
+                                    className={styles.img1}
+                                    src={"https://pic3.zhimg.com/50/v2-18309a9358eeae6c7ce616852f44bd02_400x224.jpg"}
+                                    alt={"细思极恐"}
+                                />
+                                <p className={styles.p3}>
+                                    细思极恐,谣言生于黑心而非愚者，谣言止于良心而非智者！
                                 </p>
-                                <View className={styles.div8}>
-                                    <Button type="primary" icon="caret-up">
-                                        189
-                                    </Button>
-                                    <Button
-                                        type="primary"
-                                        icon="caret-down"
-                                        style={{ marginLeft: 4 }}
-                                    />
-                                    <Button
-                                        icon="message"
-                                        className={styles.button1}
-                                    >
-                                        83条评论
-                                    </Button>
-                                    <Button
-                                        icon="share-alt"
-                                        className={styles.button1}
-                                    >
-                                        分享
-                                    </Button>
-                                    <Button
-                                        icon="star"
-                                        className={styles.button1}
-                                    >
-                                        收藏
-                                    </Button>
-                                    <Button
-                                        icon="heart"
-                                        className={styles.button1}
-                                    >
-                                        感谢
-                                    </Button>
-                                    <Dropdown overlay={menu}>
-                                        <Button
-                                            shape="circle"
-                                            icon="ellipsis"
-                                            className={styles.button1}
-                                        />
-                                    </Dropdown>
-                                </View>
                             </View>
-                        </div>
+                            <p className={styles.p4}>
+                                依稀记得10年前，那时候父亲的工资每个月还只有3000多，一辆凯美瑞却需要20多万，可是到了现在，工资倍增不说，奥迪却卖到了不足20万，不得不说，咱们的生活品质…
+                            </p>
+                            <View className={styles.div8}>
+                                <Button type="primary" icon="caret-up">
+                                    189
+                                </Button>
+                                <Button
+                                    type="primary"
+                                    icon="caret-down"
+                                    style={{ marginLeft: 4 }}
+                                />
+                                <Button
+                                    icon="message"
+                                    className={styles.button1}
+                                >
+                                    83条评论
+                                </Button>
+                                <Button
+                                    icon="share-alt"
+                                    className={styles.button1}
+                                >
+                                    分享
+                                </Button>
+                                <Button
+                                    icon="star"
+                                    className={styles.button1}
+                                >
+                                    收藏
+                                </Button>
+                                <Button
+                                    icon="heart"
+                                    className={styles.button1}
+                                >
+                                    感谢
+                                </Button>
+                                <Dropdown overlay={menu}>
+                                    <Button
+                                        shape="circle"
+                                        icon="ellipsis"
+                                        className={styles.button1}
+                                    />
+                                </Dropdown>
+                            </View>
+                        </View>
                     </div>
-                    <View style={{ flex: 1 }}>
-                        <Card style={{ padding: 0 }}>
-                            <div>
-                                <Row>
-                                    {[1, 2, 3, 4, 5, 6].map((data, i) => (
-                                        <Col
-                                            lg={8}
-                                            key={i}
-                                            style={{
-                                                marginBottom: i < 3 ? 25 : 0
-                                            }}
-                                        >
-                                            <Dropdown overlay={menu2}>
-                                                <View
-                                                    className={styles.view1}
+                </div>
+                <View style={{ flex: 1 }}>
+                    <Card style={{ padding: 0 }}>
+                        <div>
+                            <Row>
+                                {[1, 2, 3, 4, 5, 6].map((data, i) => (
+                                    <Col
+                                        lg={8}
+                                        key={i}
+                                        style={{
+                                            marginBottom: i < 3 ? 25 : 0
+                                        }}
+                                    >
+                                        <Dropdown overlay={menu2}>
+                                            <View
+                                                className={styles.view1}
+                                            >
+                                                <Icon
+                                                    type="hdd"
+                                                    style={{
+                                                        marginBottom: 10,
+                                                        fontSize: 20
+                                                    }}
+                                                />
+                                                <span
+                                                    style={{
+                                                        color: ThemeStyle.themeColor
+                                                    }}
                                                 >
-                                                    <Icon
-                                                        type="hdd"
-                                                        style={{
-                                                            marginBottom: 10,
-                                                            fontSize: 20
-                                                        }}
-                                                    />
-                                                    <span
-                                                        style={{
-                                                            color: ThemeStyle.themeColor
-                                                        }}
-                                                    >
-                                                        Live
-                                                    </span>
-                                                </View>
-                                            </Dropdown>
-                                        </Col>
-                                    ))}
-                                </Row>
-                            </div>
-                        </Card>
-                    </View>
-                </Page>
-            </div>
+                                                    Live
+                                                </span>
+                                            </View>
+                                        </Dropdown>
+                                    </Col>
+                                ))}
+                            </Row>
+                        </div>
+                    </Card>
+                </View>
+            </Page>
         );
     }
 }

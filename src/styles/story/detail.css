@@ -1,0 +1,40 @@
+@value colors: "../ThemeStyle.css";
+@value themeColor from colors;
+
+.div1{
+    background-color: #fff;
+}
+.view1{
+    padding: 10px;
+    flex-direction: row;
+}
+.view2{
+    flex:1;
+}
+.view3{
+    width: 296px;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+.p1{
+    margin-bottom: 4px;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 32px;
+    color: #1e1e1e;
+}
+.p2{
+    font-size: 15px;
+    line-height: 25px;
+    color: #262626;
+}
+.view4{
+    flex-direction: row;
+    margin-top: 10px;
+    align-items: center;
+}
+.button1{
+    margin-left:12px;
+    color:themeColor;
+}

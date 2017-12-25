@@ -1,0 +1,25 @@
+@value colors: "../ThemeStyle.css";
+@value themeColor from colors;
+
+.button1{
+    cursor: pointer;
+    padding: 0 10px;
+}
+.button1:hover .button1TopText{
+    color: #175199;
+}
+.button1:hover .button1BottomText{
+    color: #175199;
+}
+.button1TopText{
+    font-size: 14px;
+    color: themeColor;
+    text-align: center;
+}
+.button1BottomText{
+    color: #262626;
+    font-size: 18px;
+    margin-top: 2px;
+    text-align: center;
+    font-weight: 600;
+}

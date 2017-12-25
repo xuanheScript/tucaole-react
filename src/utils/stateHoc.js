@@ -4,7 +4,7 @@ import {
     FailureView,
     ErrorView,
     NullDataView,
-} from '../component/fetchView';
+} from '../components/fetchView';
 
 const ThisModule = (params = {})=>{
     return stateHoc(Object.assign({},{
