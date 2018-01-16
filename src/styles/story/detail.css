@@ -38,3 +38,25 @@
     margin-left:12px;
     color:themeColor;
 }
+.card1{
+    width: 694px;
+}
+.card1 :global(.ant-card-body){
+    padding: 0;
+}
+.view4{
+    height: 50px;
+    margin: 0 20px;
+    border-bottom: 1px solid #f0f2f7;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.p3{
+    font-size: 15px;
+    color: #262626;
+}
+.p4{
+    color: #262626;
+    font-size: 14px;
+}

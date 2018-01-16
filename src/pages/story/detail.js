@@ -8,12 +8,13 @@ import {
     Icon,
     Dropdown,
     Menu,
+    Card,
 } from "antd";
 
 
 
 
-class Detail extends Component {
+export default class Detail extends Component {
     render(){
         return(
             <div>
@@ -79,12 +80,15 @@ class Detail extends Component {
                         </View>
                     </Page>
                 </div>
+                <Page style={{flexDirection:"row"}}>
+                    <Card className={styles.card1}>
+                        <View className={styles.view4}>
+                            <p className={styles.p3}>1,061 个吐槽</p>
+                            <p className={styles.p4}>默认排序</p>
+                        </View>
+                    </Card>
+                </Page>
             </div>
         )
     }
 }
-
-
-
-
-export default Detail
