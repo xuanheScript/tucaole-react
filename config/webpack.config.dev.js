@@ -209,12 +209,12 @@ module.exports = {
                 },
               },
             ],
-            exclude: [paths.appCssModules,path.resolve(__dirname, 'src/components')],
+            exclude: [paths.appCssModules,path.resolve(__dirname, '../src/components')],
           },
           {
               test: /\.css$/,
               loader: 'style-loader!css-loader?modules',
-              include:[paths.appCssModules,path.resolve(__dirname, 'src/components'),/flexboxgrid/]
+              include:[paths.appCssModules,path.resolve(__dirname, '../src/components'),/flexboxgrid/]
           },
           {
             test: /\.less$/,

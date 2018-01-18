@@ -1,0 +1,65 @@
+@value colors: "../../../styles/ThemeStyle.css";
+@value themeColor from colors;
+
+.view1{
+    margin: 0 20px;
+    padding: 16px 0;
+    border-top: 1px solid #f0f2f7;
+}
+.view2{
+    flex-direction: row;
+}
+.view3{
+    cursor:pointer;
+}
+.img1{
+    width: 38px;
+    height: 38px;
+}
+.view4{
+    margin-left: 14px;
+    flex:1;
+}
+.a1{
+    font-weight: 600;
+    color: #444;
+    font-size: 15px;
+}
+.div1{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #646464;
+    font-size: 14px;
+    margin-top: 2px;
+}
+.view5{
+    margin-top: 10px;
+}
+.a2{
+    font-size: 14px;
+    color: #8590a6;
+}
+.div2{
+    margin-top: 9px;
+    margin-bottom: -4px;
+    overflow: hidden;
+    font-size: 15px;
+}
+.view6{
+    margin-top: 10px;
+}
+.a3{
+    font-size: 14px;
+    color: #8590a6;
+}
+.view7{
+    margin: 10px 0;
+    flex-direction: row;
+    align-items: center;
+}
+.button1{
+    margin-left:4px;
+    color: themeColor;
+    font-size: 15px;
+}

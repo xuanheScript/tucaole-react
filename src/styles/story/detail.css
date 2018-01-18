@@ -37,6 +37,7 @@
 .button1{
     margin-left:12px;
     color:themeColor;
+    font-size: 15px;
 }
 .card1{
     width: 694px;
@@ -44,10 +45,9 @@
 .card1 :global(.ant-card-body){
     padding: 0;
 }
-.view4{
+.view5{
     height: 50px;
     margin: 0 20px;
-    border-bottom: 1px solid #f0f2f7;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
